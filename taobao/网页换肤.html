@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css1.css"/>
+	</head>
+	<body>
+		<div></div>
+		<input type="button" value="皮肤1" id="btn1">
+			<input type="button" value="皮肤2" id="btn2">
+				
+				<script type="text/javascript">
+					var oBtn1 = document.getElementById("btn1");
+					var oBtn2 = document.getElementById("btn2");
+					var oLink = document.getElementsByTagName("link")[0];
+					oBtn1.onclick = function(){
+						oLink.setAttribute("href","css1.css");
+					}
+					oBtn2.onclick = function(){
+						oLink.setAttribute("href","css2.css");
+					}
+					
+					
+				</script>
+	</body>
+</html>

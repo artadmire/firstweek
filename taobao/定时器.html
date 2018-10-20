@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn1=document.getElementById('btn1');
+				var box1=document.getElementById('box1');
+				var btn2=document.getElementById('btn2');
+				var btn3=document.getElementById('btn3');
+				var box2=document.getElementById('box2');
+			
+				
+				btn1.onclick=function(){
+					clearInterval(box1.timer);
+						box1.timer=setInterval(function(){
+						var left=getStyle(box1,'left');
+						box1.style.left=parseInt(left)+11+'px';
+						if(parseInt(left)>=800){
+							box1.style.left=800+'px';
+							clearInterval(box1.timer);
+						}
+					},50)
+					
+				}
+				btn2.onclick=function(){
+					move(box1,'left',0,20);
+				}
+					
+				
+				
+				
+				btn3.onclick=function(){
+					move(box2,'left',0,20);
+					
+				}
+				
+				function move(obj,attr,target,speed){
+					clearInterval(obj.timer);
+					var current=parseInt(getStyle(obj,attr));
+					
+					if(current>target){
+							speed=-speed;
+						}
+						obj.timer=setInterval(function(){
+							var oldvalue=parseInt(getStyle(obj,attr))
+							var newvalue=oldvalue+speed;					
+							if((speed>0&&newvalue>target)||(speed<0&&newvalue<target)){
+								newvalue=target;
+							
+							}
+							obj.style[attr]=newvalue+'px';
+							if(newvalue==target){
+								clearInterval(obj.timer)
+							}
+					},100)
+				}
+				
+				
+			}
+		</script>
+		<style>
+			.box{
+				height:100px;
+				width:100px;
+				background: red;
+				margin-top:10px;
+				position:absolute;
+				left:0;
+			}
+			#box2{
+				height:100px;
+				width:100px;
+				background: palegreen;
+				margin-top:10px;
+				position:absolute;
+				left:800px;
+				top:200px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<input type="button" value='点击一下div向右移动' id='btn1' />
+		<input type="button" value='点击一下div向左移动' id='btn2' />
+		<input type="button" value='点击第二个div' id='btn3'/>
+		<div class='box' id='box1'></div>
+		<div id='box2'></div>
+		
+	</body>
+</html>

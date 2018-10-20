@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		console.time('text');
+		outer:
+			for(var i=2;i<=100;i++){
+				if(i==2){
+					continue;
+				}else{
+					for(var j=2;j<i;j++){
+						if(i%j==0){
+						continue outer;
+						}
+					}
+				}
+				
+				console.log(i);
+			}
+			console.timeEnd('text');
+		</script>
+	</body>
+</html>

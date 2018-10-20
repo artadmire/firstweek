@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById('box');
+				var sp=document.getElementsByTagName('span')[0];
+				sp.onclick=function(event){
+					alert('我是span');
+					var event=event||window.event;
+					event.cancelBubble=true;
+				}
+				box.onclick=function(){
+					alert('我是box')
+				}
+				document.onclick=function(){
+					alert('document')
+				}
+			}
+		</script>
+		<style>
+			#box{
+				height:200px;
+				width:200px;
+				background: palegreen;
+			}
+			span{background: yellow;}
+		</style>
+	</head>
+	<body>
+		<div id='box'>我是div<span>我是span</span></div>
+	</body>
+</html>

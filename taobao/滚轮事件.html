@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/tools.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1=document.getElementById('box');
+				box1.onmousewheel=function(event){
+					var event=event||window.event;
+					
+//					alert(event.wheelDelta);
+					if(event.wheelDelta>0||event.detail<0){
+						box1.style.height=box1.clientHeight-10+'px';
+					}else{
+						box1.style.height=box1.clientHeight+10+'px';
+					}
+					return false;
+				}
+				bind(box1 ,'DOMMouseScroll', box1.onmousewheel);
+			}
+		</script>
+		<style>
+			#box{
+				height:200px;
+				width:200px;
+				background: red;
+			}
+			body{
+				height:2000px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

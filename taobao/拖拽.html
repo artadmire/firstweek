@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById('box');
+				box.onmousedown=function(event){
+					var event=event||window.event;
+					var offl=box.offsetLeft;
+					var offt=box.offsetTop;
+					var chal=event.clientX-offl;
+					var chat=event.clientY-offt;
+					document.onmousemove=function(event){
+						var event=event||window.event;
+						var left=event.clientX;
+						var top=event.clientY;
+						box.style.left=left-chal+'px';
+						box.style.top=top-chat+'px';
+					box.onmouseup=function(){
+						document.onmousemove=null;
+						box.onmouseup=null;
+				
+					}
+						
+					}
+					return false;
+				}
+			}
+		</script>
+		<style>
+			div{
+				height:100px;
+				width:100px;
+				background: palegreen;
+				position: absolute;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id='box'><p>我是里面的内容</p></div>
+	</body>
+</html>
