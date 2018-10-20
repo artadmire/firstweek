@@ -1,0 +1,63 @@
+
+header{
+	height:3.2rem;
+	width:7.2rem;
+	background: url(../img/fdg-1.jpg) no-repeat center/cover;
+}
+.main{
+	margin:0.37rem 0.14rem 0 0.14rem;
+}
+.main1{
+	width: 6.8rem;
+	height:0.98rem;
+	border:1px solid #d5d5d5;
+	line-height: 0.98rem;
+	border-bottom:0;
+}
+.main1>p{
+	font-family:iconfont;
+	float:left;
+	margin-left: 0.27rem;
+	margin-right: 0.31rem;
+	color:#6a737a;
+}
+.main1>input{
+	border:0;
+	color:#6a737a;
+}
+.main2{
+	border-bottom:1px solid #d5d5d5;
+}
+.main2>label{
+	color:#6a737a;
+}
+.main3{
+	border:0;
+}
+.main3>p{
+	font-family:iconfont;
+	float:left;
+	color:red;
+}
+.main3>input{
+	opacity:0;
+}
+.main>p{
+	height:0.8rem;
+	background: #fc727f;
+	border:1px solid #fc727f;
+	border-radius: 0.1rem;
+	line-height: 0.8rem;
+	text-align: center;
+	}
+footer{
+	margin-top:4.2rem;
+	margin-bottom:0.58rem;
+	text-align: center;
+	
+}
+footer>a{
+	color:#4fabff;
+	padding-right:0.33rem;
+	padding-left:0.33rem;
+}

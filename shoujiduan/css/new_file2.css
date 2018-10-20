@@ -1,0 +1,88 @@
+header{
+	height: 1rem;
+	width:6.68rem;
+	background: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left:0.22rem;
+	padding-right:0.3rem;
+	
+}
+.ff{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height:100%;
+	width:0.5rem;
+}
+header>.ff>p{
+	font-family: iconfont;
+	font-size: 0.4rem;
+}
+header>img{
+	height:0.58rem;
+	width:1.72rem;
+	
+}
+header>.ff>span{
+	font-size:0.12rem;
+}
+header>p{
+	font-family: iconfont;
+}
+.banner{
+	height:3.42rem;
+	width: 7.2rem;
+	background: url(../img/aa-1.jpg) no-repeat center/cover;
+}
+.main{
+	display: flex;
+	flex-wrap: wrap;
+	height:6.7rem
+}
+.main>a{
+	height:1.9rem;
+	width:2.38rem;
+	flex:1 1 auto;
+	border-right:1px solid #cbcbcb;
+	border-bottom:1px solid #cbcbcb;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main>a>p:first-child{
+	font-family: iconfont;
+	font-size:0.8rem;
+	margin:0.3rem 0 0.13rem 0;
+	color:red;
+}
+.main>a:nth-child(10){
+	justify-content: center;
+}
+footer{
+	display: flex;
+	height: 1.18rem;
+	width:7.2rem;
+	background: #f7f7f7;
+	position: fixed;
+	bottom:0;
+	left:0;
+}
+footer>a{
+	display: flex;
+	flex-direction: column;
+	flex:1 1 25%;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+
+footer>a>p:first-child{
+	font-family: iconfont;
+	font-size:0.53rem;
+	
+	color:red;
+}
